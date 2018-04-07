@@ -1,0 +1,18 @@
+<div class="alert alert-success intro-alert" role="alert">
+    <button type="button" class="close">
+        <span aria-hidden="true" class="close">&times;</span>
+    </button>
+    <h4 class="text-center">Welcome to your private to-do list!</h4>
+    <p class="text-center">
+        What you add here will automatically be saved in your browser's cookie memory<br> and can only be displayed on this device.</p><br>
+    <p class="text-center">Settings for the service can be found in the hamburg menu at the bottom of the page</p>
+    <p class="text-center">A Simple To-Do Application.</p>
+</div>
+<script>
+    // Dölj intro alert
+    $('.close').on('click', function () {
+        $('.intro-alert').slideUp();
+        $('.intro-alert').css({opacity: 0});
+
+    });
+</script>

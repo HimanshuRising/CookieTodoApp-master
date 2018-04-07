@@ -1,0 +1,47 @@
+
+        //Dropbox för saker som jag vill spara
+        
+        this.tasks = tasks
+        
+        data-ng-click="toggleStatus($this.checkboxStatus, $index)"
+        ng-init="$this.checkboxStatus = true"
+        
+        
+        $scope.toggleStatus = function (status, task) {
+            //console.log(task);
+            //console.log(status);
+
+            if (status) {
+                return [countIncomplete(task)];
+            } else {
+                return [countIncomplete(task)];
+            };
+
+        };
+
+        $scope.countIncomplete = function() {
+            var count = 0;
+            var i = 0;
+            for (i; i < $scope.tasks.length; i++) {
+                    console.log($scope.tasks[i].completed);
+                    console.log(i + ' i');
+                if ($scope.tasks[i].completed == false) {
+                    count++;
+                    console.log(count + 'count');
+                } else {
+                }
+            };
+            return $scope.counted = count -1;
+        };
+      
+        
+        $scope.addTask = function () {
+            $scope.tasks.push({
+                time: '3/7-2015 16:42',
+                title: $scope.newTitle,
+                desc: $scope.newDesc,
+                hide: 'false',
+                completed: false
+
+            });
+        };
